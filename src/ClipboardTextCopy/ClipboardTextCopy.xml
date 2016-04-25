@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="ClipboardTextCopy.widget.ClipboardTextCopy" needsEntityContext="false" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>ClipboardTextCopy</name>
+    <description>Copy selected text from a text input element to the user's clipboard.</description>
+    <icon />
+    <properties>
+        <property key="labelCaption" type="translatableString" required="false">
+            <caption>Caption</caption>
+            <category>Appearance</category>
+            <description>Button label caption</description>
+        </property>
+        <property key="targetClassName" type="string" required="true">
+            <caption>Target element classname</caption>
+            <category>Appearance</category>
+            <description>The copy button will be connected to the element of which the Class property corresponds to the specified value and is on the same level as the target element.</description>
+        </property>
+        <property key="buttonstyle" type="enumeration" required="true" defaultValue="default">
+			<caption>Button style</caption>
+			<category>general</category>
+			<description></description>
+            <enumerationValues>
+				<enumerationValue key="default">Default</enumerationValue>
+				<enumerationValue key="inverse">Inverse</enumerationValue>
+				<enumerationValue key="primary">Primary</enumerationValue>
+				<enumerationValue key="info">Info</enumerationValue>
+				<enumerationValue key="success">Success</enumerationValue>
+				<enumerationValue key="warning">Warning</enumerationValue>
+				<enumerationValue key="danger">Danger</enumerationValue>
+			</enumerationValues>
+		</property>
+	</properties>
+</widget>
+
+
