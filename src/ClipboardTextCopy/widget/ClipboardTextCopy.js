@@ -77,6 +77,10 @@ define([
                 if(!this._targetElement) {
                     this._targetElement = dojoQuery("."+this.targetClassName+" textarea")[0];
                 }
+                
+                if (!this._targetElement) {
+                    this._targetElement = dojoQuery("."+this.targetClassName)[0];
+                }
 
                 if(this._targetElement) {
                  
