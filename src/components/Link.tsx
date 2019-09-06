@@ -11,13 +11,15 @@ export interface LinkProps {
 }
 
 export const Link = (props: LinkProps) => {
-  const classes = classNames('mx-link', props.className);
+  const classes = classNames('clipboardTextCopy mx-link', props.className);
   return (
     <span className={classes} title={props.tooltip}>
-      <img src={props.iconUrl}></img>{' '}
+      {props.iconUrl ? (
+        <img className="clipboardTextCopy-img" src={props.iconUrl}></img>
+      ) : null}
       <a href="" onClick={props.onClickAction}>
         {props.label}
-      </a>{' '}
+      </a>
     </span>
   );
 };

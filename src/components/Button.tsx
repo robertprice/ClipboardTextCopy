@@ -1,5 +1,3 @@
-import '../style/Button.css';
-
 import classNames from 'classnames';
 import React from 'react';
 
@@ -16,9 +14,13 @@ export interface ButtonProps {
 }
 
 export const Button = (props: ButtonProps) => {
-  const classes = classNames('btn mx-button', props.className, {
-    [`btn-${props.bootstrapStyle}`]: !!props.bootstrapStyle,
-  });
+  const classes = classNames(
+    'clipboardTextCopy btn mx-button',
+    props.className,
+    {
+      [`btn-${props.bootstrapStyle}`]: !!props.bootstrapStyle,
+    }
+  );
   return (
     <button
       type="button"
@@ -27,8 +29,10 @@ export const Button = (props: ButtonProps) => {
       style={props.style}
       title={props.tooltip}
     >
-      <img src={props.iconUrl}></img>
-      {` ${props.label} `}
+      {props.iconUrl ? (
+        <img className="clipboardTextCopy-img" src={props.iconUrl}></img>
+      ) : null}
+      {props.label}
     </button>
   );
 };
