@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="ClipboardTextCopy.widget.ClipboardTextCopy" needsEntityContext="false" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>Clipboard Text Copy</name>
+    <description>Copy selected text from a text input element to the user's clipboard</description>
+    <icon />
+    <properties>
+        <property key="targetClassName" type="string">
+            <caption>Target element class name</caption>
+            <category>General</category>
+            <description>Class name of the input or html element. Input element value will be copied, other elements the inner text is copied</description>
+        </property>
+        <property key="labelCaption" type="translatableString" required="false">
+            <caption>Caption</caption>
+            <category>Appearance</category>
+            <description/>
+            <translations>
+                <translation lang="en_US">Copy</translation>
+                <translation lang="nl_NL">Kopieer</translation>
+            </translations>
+        </property>
+        <property key="linkTitle" type="translatableString" required="false">
+            <caption>Tooltip</caption>
+            <category>Appearance</category>
+            <description/>
+        </property>
+         <property key="renderType" type="enumeration" defaultValue="button">
+            <caption>Render mode</caption>
+            <category>Appearance</category>
+            <description/>
+            <enumerationValues>
+                <enumerationValue key="button">Button</enumerationValue>
+                <enumerationValue key="link">Link</enumerationValue>
+            </enumerationValues>
+        </property>
+         <property key="icon" type="image" required="false">
+            <caption>Icon</caption>
+            <category>Appearance</category>
+            <description/>
+        </property>
+        <property key="buttonstyle" type="enumeration" defaultValue="default">
+            <caption>Button style</caption>
+            <category>Appearance</category>
+            <description>Only for buttons, not for links</description>
+            <enumerationValues>
+                <enumerationValue key="default">Default</enumerationValue>
+                <enumerationValue key="inverse">Inverse</enumerationValue>
+                <enumerationValue key="primary">Primary</enumerationValue>
+                <enumerationValue key="info">Info</enumerationValue>
+                <enumerationValue key="success">Success</enumerationValue>
+                <enumerationValue key="warning">Warning</enumerationValue>
+                <enumerationValue key="danger">Danger</enumerationValue>
+            </enumerationValues>
+        </property>
+    </properties>
+</widget>
