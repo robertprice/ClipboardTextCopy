@@ -63,21 +63,12 @@ const handleClick = (
 };
 
 const findElement = (targetClassName: string) => {
-  let target = document.querySelector('.' + targetClassName + ' input');
+  let target =
+    document.querySelector('.' + targetClassName + ' input') ||
+    document.querySelector('.' + targetClassName + ' textarea') ||
+    document.querySelector('.' + targetClassName + ' .form-control-static') ||
+    document.querySelector('.' + targetClassName);
 
-  if (!target) {
-    target = document.querySelector('.' + targetClassName + ' textarea');
-  }
-
-  if (!target) {
-    target = document.querySelector(
-      '.' + targetClassName + ' .form-control-static'
-    );
-  }
-
-  if (!target) {
-    target = document.querySelector('.' + targetClassName);
-  }
   return target as HTMLElement;
 };
 
