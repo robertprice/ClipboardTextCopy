@@ -34,6 +34,7 @@ const render = (
     renderType: params.renderType,
     iconUrl: params.icon,
     buttonstyle: params.buttonstyle,
+    buttonClass: params.buttonClass,
     onClick: (event: React.MouseEvent<HTMLElement>) => {
       handleClick(params.targetClassName, id, parent);
       event.preventDefault();

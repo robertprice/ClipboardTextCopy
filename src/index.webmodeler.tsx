@@ -2,7 +2,6 @@ import React from 'react';
 
 import { LinkButton } from './components/LinkButton';
 import styleAsString from './style/style.scss';
-import parseStyle from './utils/parseStyle';
 
 interface PreviewProps {
   style: string;
@@ -23,7 +22,6 @@ export const preview = ({
       return false;
     },
     className: className,
-    style: parseStyle(style),
     labelCaption: props.labelCaption,
     tooltip: props.linkTitle,
     renderType: props.renderType,

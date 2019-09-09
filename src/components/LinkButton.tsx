@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { BootstrapStyle } from '../@typings';
 import { Button } from './Button';
 import { Link } from './Link';
 
@@ -12,6 +11,7 @@ export interface LinkButtonProps {
   style?: React.CSSProperties;
   className?: string;
   buttonstyle: BootstrapStyle;
+  buttonClass?: string;
   onClick: (event: React.MouseEvent<HTMLElement>) => void;
 }
 
@@ -22,9 +22,8 @@ export const LinkButton = (props: LinkButtonProps) => {
         label={props.labelCaption}
         onClickAction={props.onClick}
         iconUrl={props.iconUrl}
-        className={props.className}
-        style={props.style}
         tooltip={props.tooltip}
+        className={props.buttonClass}
         bootstrapStyle={props.buttonstyle}
       />
     );
@@ -34,8 +33,6 @@ export const LinkButton = (props: LinkButtonProps) => {
         label={props.labelCaption}
         onClickAction={props.onClick}
         iconUrl={props.iconUrl}
-        className={props.className}
-        style={props.style}
         tooltip={props.tooltip}
       />
     );

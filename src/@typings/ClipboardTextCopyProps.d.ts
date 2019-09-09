@@ -7,13 +7,5 @@ export interface ClipboardTextCopyProps extends Widget {
   renderType: 'button' | 'link';
   icon: any;
   buttonstyle: BootstrapStyle;
+  buttonClass: string;
 }
-
-export type BootstrapStyle =
-  | 'default'
-  | 'inverse'
-  | 'primary'
-  | 'info'
-  | 'success'
-  | 'warning'
-  | 'danger';

@@ -6,7 +6,6 @@ export interface LinkProps {
   onClickAction: (event: React.MouseEvent<HTMLElement>) => void;
   iconUrl: string;
   className?: string;
-  style?: React.CSSProperties;
   tooltip: string;
 }
 

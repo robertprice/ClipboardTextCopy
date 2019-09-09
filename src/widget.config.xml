@@ -51,5 +51,10 @@
                 <enumerationValue key="danger">Danger</enumerationValue>
             </enumerationValues>
         </property>
+        <property key="buttonClass" type="string" required="false">
+            <caption>Button Class</caption>
+            <category>Appearance</category>
+            <description>Class name of the copy button.</description>
+        </property>
     </properties>
 </widget>
