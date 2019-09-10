@@ -13,7 +13,7 @@ export const initWidget = (
   params: ClipboardTextCopyProps,
   parent: HTMLElement
 ) => {
-  const target = findElement(params.targetClassName);
+  const target = findElement(document.body, params.targetClassName);
   if (!target) {
     showError(params.targetClassName, id, parent);
     return;
@@ -35,6 +35,7 @@ const render = (
     iconUrl: params.icon,
     buttonstyle: params.buttonstyle,
     buttonClass: params.buttonClass,
+    tabIndex: parent.tabIndex,
     onClick: (event: React.MouseEvent<HTMLElement>) => {
       handleClick(params.targetClassName, id, parent);
       event.preventDefault();
@@ -51,7 +52,15 @@ const handleClick = (
   id: string,
   parent: HTMLElement
 ) => {
-  const target = findElement(targetClassName);
+  let target;
+  let targetParent = parent;
+  while (!target && !!targetParent && targetParent != document.body) {
+    if (!targetParent.parentElement) break;
+
+    targetParent = targetParent.parentElement;
+    target = findElement(targetParent, targetClassName);
+  }
+
   if (!target) {
     showError(targetClassName, id, parent);
     return;
@@ -62,12 +71,12 @@ const handleClick = (
   if (!!text) copyToClipboard(text);
 };
 
-const findElement = (targetClassName: string) => {
+const findElement = (parent: HTMLElement, targetClassName: string) => {
   let target =
-    document.querySelector('.' + targetClassName + ' input') ||
-    document.querySelector('.' + targetClassName + ' textarea') ||
-    document.querySelector('.' + targetClassName + ' .form-control-static') ||
-    document.querySelector('.' + targetClassName);
+    parent.querySelector('.' + targetClassName + ' input') ||
+    parent.querySelector('.' + targetClassName + ' textarea') ||
+    parent.querySelector('.' + targetClassName + ' .form-control-static') ||
+    parent.querySelector('.' + targetClassName);
 
   return target as HTMLElement;
 };

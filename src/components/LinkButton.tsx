@@ -12,6 +12,7 @@ export interface LinkButtonProps {
   className?: string;
   buttonstyle: BootstrapStyle;
   buttonClass?: string;
+  tabIndex: number;
   onClick: (event: React.MouseEvent<HTMLElement>) => void;
 }
 
@@ -24,6 +25,7 @@ export const LinkButton = (props: LinkButtonProps) => {
         iconUrl={props.iconUrl}
         tooltip={props.tooltip}
         className={props.buttonClass}
+        tabIndex={props.tabIndex}
         bootstrapStyle={props.buttonstyle}
       />
     );
@@ -34,6 +36,7 @@ export const LinkButton = (props: LinkButtonProps) => {
         onClickAction={props.onClick}
         iconUrl={props.iconUrl}
         tooltip={props.tooltip}
+        tabIndex={props.tabIndex}
       />
     );
   return null;

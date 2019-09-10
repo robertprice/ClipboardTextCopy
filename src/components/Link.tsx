@@ -7,6 +7,7 @@ export interface LinkProps {
   iconUrl: string;
   className?: string;
   tooltip: string;
+  tabIndex: number;
 }
 
 export const Link = (props: LinkProps) => {
@@ -16,7 +17,7 @@ export const Link = (props: LinkProps) => {
       {props.iconUrl ? (
         <img className="clipboardTextCopy-img" src={props.iconUrl}></img>
       ) : null}
-      <a href="" onClick={props.onClickAction}>
+      <a href="" onClick={props.onClickAction} tabIndex={props.tabIndex}>
         {props.label}
       </a>
     </span>

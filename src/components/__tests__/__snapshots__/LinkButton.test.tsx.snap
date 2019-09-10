@@ -4,6 +4,7 @@ exports[`ClipboardTextCopy Component Test Unit should render button type correct
 <button
   className="clipboardTextCopy btn mx-button jumbotron btn-info"
   onClick={[Function]}
+  tabIndex={2}
   title="buttonTitle"
   type="button"
 >
@@ -27,6 +28,7 @@ exports[`ClipboardTextCopy Component Test Unit should render link type correctly
   <a
     href=""
     onClick={[Function]}
+    tabIndex={2}
   >
     labelCaption
   </a>

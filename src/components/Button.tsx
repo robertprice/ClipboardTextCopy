@@ -8,6 +8,7 @@ export interface ButtonProps {
   tooltip?: string;
   className?: string;
   bootstrapStyle?: BootstrapStyle;
+  tabIndex: number;
 }
 
 export const Button = (props: ButtonProps) => {
@@ -24,6 +25,7 @@ export const Button = (props: ButtonProps) => {
       className={classes}
       onClick={props.onClickAction}
       title={props.tooltip}
+      tabIndex={props.tabIndex}
     >
       {props.iconUrl ? (
         <img className="clipboardTextCopy-img" src={props.iconUrl}></img>
