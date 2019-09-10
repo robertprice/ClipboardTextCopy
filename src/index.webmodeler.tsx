@@ -26,7 +26,8 @@ export const preview = ({
     tooltip: props.linkTitle,
     renderType: props.renderType,
     iconUrl: props.icon,
-    buttonstyle: props.buttonstyle,
+    buttonStyle: props.buttonstyle,
+    tabIndex: props.tabIndex,
   };
 
   return <LinkButton {...nextProps} />;

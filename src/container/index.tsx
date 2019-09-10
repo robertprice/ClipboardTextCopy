@@ -33,7 +33,7 @@ const render = (
     tooltip: params.linkTitle,
     renderType: params.renderType,
     iconUrl: params.icon,
-    buttonstyle: params.buttonstyle,
+    buttonStyle: params.buttonstyle,
     buttonClass: params.buttonClass,
     tabIndex: parent.tabIndex,
     onClick: (event: React.MouseEvent<HTMLElement>) => {
