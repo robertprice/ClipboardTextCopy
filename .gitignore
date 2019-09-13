@@ -10,6 +10,7 @@ test/**/deployment/
 test/**/javasource/
 test/**/resources/
 test/**/theme/
+test/**/userlib/
 test/**/.classpath
 test/**/.project
 test/**/*.launch

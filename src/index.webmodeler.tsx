@@ -1,19 +1,10 @@
 import React from 'react';
 
+import { ClipboardTextCopyProps } from './@typings';
 import { LinkButton } from './components/LinkButton';
 import styleAsString from './style/style.scss';
 
-interface PreviewProps {
-  style: string;
-  class: string;
-  [key: string]: any;
-}
-
-export const preview = ({
-  style,
-  class: className,
-  ...props
-}: PreviewProps) => {
+export const preview = (props: ClipboardTextCopyProps) => {
   const nextProps = {
     onClick: (event: React.MouseEvent<HTMLElement>) => {
       event.preventDefault();
@@ -21,13 +12,12 @@ export const preview = ({
       event.nativeEvent.stopImmediatePropagation();
       return false;
     },
-    className: className,
     labelCaption: props.labelCaption,
     tooltip: props.linkTitle,
     renderType: props.renderType,
     iconUrl: props.icon,
-    buttonStyle: props.buttonstyle,
-    tabIndex: props.tabIndex,
+    buttonType: props.buttonstyle,
+    tabIndex: props.tabIndex ? props.tabIndex : 0,
   };
 
   return <LinkButton {...nextProps} />;

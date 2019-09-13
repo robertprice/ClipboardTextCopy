@@ -8,9 +8,7 @@ export interface LinkButtonProps {
   tooltip: string;
   iconUrl: string;
   renderType: string;
-  style?: React.CSSProperties;
-  className?: string;
-  buttonStyle: BootstrapStyle;
+  buttonType?: ButtonType;
   buttonClass?: string;
   tabIndex: number;
   onClick: (event: React.MouseEvent<HTMLElement>) => void;
@@ -26,7 +24,7 @@ export const LinkButton = (props: LinkButtonProps) => {
         tooltip={props.tooltip}
         className={props.buttonClass}
         tabIndex={props.tabIndex}
-        bootstrapStyle={props.buttonStyle}
+        buttonType={props.buttonType}
       />
     );
   if (props.renderType === 'link')

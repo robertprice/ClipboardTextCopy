@@ -1,19 +1,16 @@
-import classNames from 'classnames';
 import React from 'react';
 
 export interface LinkProps {
   label: string;
   onClickAction: (event: React.MouseEvent<HTMLElement>) => void;
   iconUrl: string;
-  className?: string;
   tooltip: string;
   tabIndex: number;
 }
 
 export const Link = (props: LinkProps) => {
-  const classes = classNames('clipboardTextCopy mx-link', props.className);
   return (
-    <span className={classes} title={props.tooltip}>
+    <span className={'clipboardTextCopy mx-link'} title={props.tooltip}>
       {props.iconUrl ? (
         <img className="clipboardTextCopy-img" src={props.iconUrl}></img>
       ) : null}

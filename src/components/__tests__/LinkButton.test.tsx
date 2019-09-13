@@ -26,7 +26,7 @@ describe('ClipboardTextCopy Component Test Unit', () => {
       tooltip: 'buttonTitle',
       renderType: 'button',
       iconUrl: 'icon',
-      buttonstyle: 'info',
+      buttonType: 'info',
       buttonClass: 'jumbotron',
     };
     const component = create(<LinkButton {...props} />);
@@ -43,7 +43,6 @@ describe('ClipboardTextCopy Component Test Unit', () => {
       tooltip: 'linkTitle',
       renderType: 'link',
       iconUrl: 'icon',
-      buttonstyle: '',
     };
     const component = create(<LinkButton {...props} />);
     expect(component.toJSON()).toMatchSnapshot();

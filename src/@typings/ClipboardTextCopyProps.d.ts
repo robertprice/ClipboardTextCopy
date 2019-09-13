@@ -6,6 +6,6 @@ export interface ClipboardTextCopyProps extends Widget {
   linkTitle: string; //Tooltip
   renderType: 'button' | 'link';
   icon: any;
-  buttonstyle: BootstrapStyle;
+  buttonstyle: ButtonType;
   buttonClass: string;
 }

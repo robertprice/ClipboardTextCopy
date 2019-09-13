@@ -18,7 +18,14 @@
     "Copy Paste"
   ],
   "license": "Apache 2",
-  "author": "Roeland Salij, Meisam Mahdian",
+  "scripts": {
+    "start": "cross-env MODE=development webpack-dev-server --hot --config webpack.dev.js",
+    "build": "cross-env MODE=production webpack --config webpack.prod.js && npm run zip",
+    "test": "jest --verbose",
+    "test:watch": "jest --watchAll",
+    "test:coverage": "jest --verbose --coverage",
+    "zip": "node ./generateMpkFile.js"
+  },
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -82,13 +89,5 @@
     "webpack-inject-plugin": "^1.5.2",
     "webpack-merge": "^4.2.1",
     "xml-webpack-plugin": "^0.0.2"
-  },
-  "scripts": {
-    "start": "cross-env MODE=development webpack-dev-server --hot --config webpack.dev.js",
-    "build": "cross-env MODE=production webpack --config webpack.prod.js && npm run zip",
-    "test": "jest --verbose",
-    "test:watch": "jest --watchAll",
-    "test:coverage": "jest --verbose --coverage",
-    "zip": "node ./generateMpkFile.js"
   }
 }

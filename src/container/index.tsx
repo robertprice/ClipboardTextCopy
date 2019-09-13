@@ -6,7 +6,6 @@ import ReactDOM from 'react-dom';
 import { ClipboardTextCopyProps } from '../@typings';
 import { Error } from '../components/Error';
 import { LinkButton, LinkButtonProps } from '../components/LinkButton';
-import parseStyle from '../utils/parseStyle';
 
 export const initWidget = (
   id: string,
@@ -27,13 +26,11 @@ const render = (
   parent: HTMLElement
 ) => {
   const props: LinkButtonProps = {
-    style: parseStyle(params.style as string),
-    className: params.className,
     labelCaption: params.labelCaption,
     tooltip: params.linkTitle,
     renderType: params.renderType,
     iconUrl: params.icon,
-    buttonStyle: params.buttonstyle,
+    buttonType: params.buttonstyle,
     buttonClass: params.buttonClass,
     tabIndex: parent.tabIndex,
     onClick: (event: React.MouseEvent<HTMLElement>) => {

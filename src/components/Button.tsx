@@ -7,7 +7,7 @@ export interface ButtonProps {
   iconUrl?: string;
   tooltip?: string;
   className?: string;
-  bootstrapStyle?: BootstrapStyle;
+  buttonType?: ButtonType;
   tabIndex: number;
 }
 
@@ -16,7 +16,7 @@ export const Button = (props: ButtonProps) => {
     'clipboardTextCopy btn mx-button',
     props.className,
     {
-      [`btn-${props.bootstrapStyle}`]: !!props.bootstrapStyle,
+      [`btn-${props.buttonType}`]: !!props.buttonType,
     }
   );
   return (

@@ -3,7 +3,7 @@ declare module '*.scss';
 declare module 'MxWidgetBase';
 declare module 'dojoBaseDeclare';
 
-type BootstrapStyle =
+type ButtonType =
   | 'default'
   | 'inverse'
   | 'primary'
