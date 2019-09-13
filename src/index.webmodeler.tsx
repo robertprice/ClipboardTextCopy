@@ -10,7 +10,6 @@ export const preview = (props: ClipboardTextCopyProps) => {
       event.preventDefault();
       event.stopPropagation();
       event.nativeEvent.stopImmediatePropagation();
-      return false;
     },
     labelCaption: props.labelCaption,
     tooltip: props.linkTitle,

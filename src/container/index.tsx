@@ -74,7 +74,6 @@ const render = (
       event.preventDefault();
       event.stopPropagation();
       event.nativeEvent.stopImmediatePropagation();
-      return false;
     },
   };
   ReactDOM.render(<LinkButton {...props} />, parent);
