@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<widget id="ClipboardTextCopy.widget.ClipboardTextCopy" needsEntityContext="false" xmlns="http://www.mendix.com/widget/1.0/">
-    <name>Clipboard Text Copy</name>
-    <description>Copy selected text from a text input element to the user's clipboard</description>
+<widget id="<%= NAME %>.widget.<%= NAME %>" needsEntityContext="false" xmlns="http://www.mendix.com/widget/1.0/">
+    <name><%= FRIENDLY_NAME %></name>
+    <description><%= WIDGET_DESC %></description>
     <icon />
     <properties>
         <property key="targetClassName" type="string">
