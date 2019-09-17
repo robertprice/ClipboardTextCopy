@@ -1,13 +1,11 @@
-import _widgetBase from 'MxWidgetBase';
 import declare from 'dojoBaseDeclare';
-import { initWidget } from './container';
+import _widgetBase from 'MxWidgetBase';
+
 import { widgetName } from '../package.json';
+import { initWidget } from './container';
 
 export default declare(`${widgetName}.widget.${widgetName}`, [_widgetBase], {
-  constructor() {
-    this.subscriptionHandles = [];
-    this.keyword = '';
-  },
+  constructor() {},
   postCreate() {
     console.debug(`${this.id} >> postCreate`);
   },
