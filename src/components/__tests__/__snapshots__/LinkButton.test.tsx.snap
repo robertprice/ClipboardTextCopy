@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClipboardTextCopy Component Test Unit should render button type correctly 1`] = `
+<button
+  className="clipboardTextCopy btn mx-button jumbotron btn-info"
+  onClick={[Function]}
+  tabIndex={2}
+  title="buttonTitle"
+  type="button"
+>
+  <img
+    className="clipboardTextCopy-img"
+    src="icon"
+  />
+  labelCaption
+</button>
+`;
+
+exports[`ClipboardTextCopy Component Test Unit should render link type correctly 1`] = `
+<span
+  className="clipboardTextCopy mx-link"
+  title="linkTitle"
+>
+  <img
+    className="clipboardTextCopy-img"
+    src="icon"
+  />
+  <a
+    href=""
+    onClick={[Function]}
+    tabIndex={2}
+  >
+    labelCaption
+  </a>
+</span>
+`;
