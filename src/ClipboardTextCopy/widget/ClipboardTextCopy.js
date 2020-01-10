@@ -9,7 +9,6 @@ define([
 
     return declare("ClipboardTextCopy.widget.ClipboardTextCopy", [ _WidgetBase ], {
         // Parameters configured in the Modeler.
-        targetClassName: "",
         labelCaption: "",
         linkTitle: "",
         renderType: "button", // or link
@@ -78,7 +77,7 @@ define([
             document.body.removeChild(dummy);
         },
 
-        uninitialize() {
+        uninitialize: function() {
            if (this.button) {
                this.button.uninitialize();
            }
